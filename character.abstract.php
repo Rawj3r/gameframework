@@ -23,6 +23,7 @@ abstract class Character{
     }
 
 
+
     public function battle($defender){
 
         // get defender data
