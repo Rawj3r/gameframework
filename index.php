@@ -16,6 +16,7 @@ $game->player['Roger']->setHP(200);
 $game->player['Roger']->setDMG(12);
 $game->player['Roger']->show();
 
+
 $ss->register('Roger', $game->player['Roger']);
 
 //model and give defaults to a character
