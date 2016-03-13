@@ -20,7 +20,7 @@ abstract class Character{
 
     public function battle($defender){
         $defender = (object) $defender;
-        echo $defender;
+
     }
 
     public function __toString(){
