@@ -14,13 +14,31 @@ abstract class Character{
         $this->dmg = (int) $int;
     }
 
-    public function show(){
-        echo $this;
+    public function getDmg(){
+        return $this->dmg;
     }
 
-    public function battle($defender){
-        $defender = (object) $defender;
+    public function getHp(){
+        return $this->hp;
+    }
 
+
+    public function battle($defender){
+
+        // get defender data
+        $defender = (object) $defender;
+        $hp = $defender->getHp();
+
+        //get attacker data
+        $dmg = $this->getDmg();
+
+        $defender->setHP($hp-$dmg);
+
+        echo "Defender has {$defender->getHp()} HP";
+    }
+
+    public function show(){
+        echo $this;
     }
 
     public function __toString(){
