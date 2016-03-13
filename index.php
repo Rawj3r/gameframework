@@ -4,7 +4,10 @@ include 'game.class.php';
 include 'character.abstract.php';
 include 'player.class.php';
 include 'bot.class.php';
+include 'session.class.php';
 
+// init session
+$ss = new Session();
 $game = new Game();
 
 $game->create('player', 'Roger');
