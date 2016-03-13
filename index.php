@@ -16,6 +16,8 @@ $game->player['Roger']->setHP(200);
 $game->player['Roger']->setDMG(12);
 $game->player['Roger']->show();
 
+$ss->register('Roger', $game->player['Roger']);
+
 //model and give defaults to a character
 $game->create('bot', 'CyberWolverine');
 $game->bot['CyberWolverine']->setHP(600);
@@ -23,3 +25,9 @@ $game->bot['CyberWolverine']->setDMG(132);
 $game->bot['CyberWolverine']->show();
 
 $game->player['Roger']->battle($game->bot['CyberWolverine']);
+
+$ss->show();
+
+
+$name = $ss->get('Roger');
+print_r($name);

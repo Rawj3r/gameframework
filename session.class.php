@@ -13,6 +13,10 @@ class Session{
         echo "Session started<br>";
     }
 
+    public function get($name){
+        return unserialize($_SESSION[$name]);
+    }
+
     public function register($name, $object){
         $_SESSION[$name] = serialize((object)$object);
     }
