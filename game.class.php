@@ -10,6 +10,24 @@ class Game{
 		echo "Game started <br>";
 	}
 
+    public function import($object){
+        $object = (object) $object;
+        $type = get_class($object);
+        $playerOrBot = strtolower($type);
+
+        //build object
+        $name = $object->getName();
+        $name = strtolower($name);
+        $hp = $object->getHp();
+        $dmg = $object->getDmg();
+
+        $this->{$playerOrBot}[$name] = new $type($this, $name);
+        $this->{$playerOrBot}[$name]->setHp($hp);
+        $this->{$playerOrBot}[$name]->setdmg($dmg);
+
+        echo $this->{$playerOrBot}[$name];
+    }
+
     public function create($type, $name){
 
         $type = strtolower($type);

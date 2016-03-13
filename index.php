@@ -29,5 +29,4 @@ $game->player['Roger']->battle($game->bot['CyberWolverine']);
 $ss->show();
 
 
-$name = $ss->get('Roger');
-print_r($name);
+

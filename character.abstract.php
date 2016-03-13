@@ -22,6 +22,16 @@ abstract class Character{
         return $this->hp;
     }
 
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
 
 
     public function battle($defender){
