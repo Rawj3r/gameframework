@@ -12,4 +12,15 @@ class Session{
         session_start();
         echo "Session started<br>";
     }
+
+    public function register($name, $object){
+        $_SESSION[$name] = serialize((object)$object);
+    }
+
+    public function show(){
+        echo "<pre>";
+        print_r($_SESSION);
+        echo "</pre>";
+    }
+
 }

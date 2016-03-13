@@ -10,10 +10,13 @@ include 'session.class.php';
 $ss = new Session();
 $game = new Game();
 
+//model and give defaults to a character
 $game->create('player', 'Roger');
 $game->player['Roger']->setHP(200);
 $game->player['Roger']->setDMG(12);
 $game->player['Roger']->show();
+
+//model and give defaults to a character
 $game->create('bot', 'CyberWolverine');
 $game->bot['CyberWolverine']->setHP(600);
 $game->bot['CyberWolverine']->setDMG(132);
